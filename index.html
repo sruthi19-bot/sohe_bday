@@ -271,11 +271,11 @@
   </section>
 
   <section id="quiz">
-    <span class="eyebrow center" style="display:block; width:fit-content; margin:0 auto 18px;">How well do you know you?</span>
-    <h2 class="section-title">A little quiz</h2>
-    <p class="section-sub">pick what feels right — let's see how many I got in your voice 👀</p>
+    <span class="eyebrow center" style="display:block; width:fit-content; margin:0 auto 18px;">A little challenge</span>
+    <h2 class="section-title">How well do you know Sruthi?</h2>
+    <p class="section-sub">these are MY favorites — let's see how many you can guess right 👀</p>
     <div class="quiz-wrap" id="quizWrap"></div>
-    <button id="quizSubmit" onclick="submitQuiz()">See my guesses</button>
+    <button id="quizSubmit" onclick="submitQuiz()">See how well I know her</button>
     <div id="quizResult"></div>
   </section>
 
@@ -340,15 +340,15 @@ const things = [
 
 const quiz = [
   {q:"Mountain or Beach?", opts:["Mountains 🏔️","Beach 🌊","Both equally","Neither, prefers cozy indoors"], correct:2},
-  {q:"Favorite Snack?", opts:["Something sweet 🍫","Something spicy 🌶️","Something salty/crunchy 🍟","Fruits 🍓"], correct:1},
-  {q:"Ideal Weekend?", opts:["Sleeping in all day","Hanging out with friends","Exploring somewhere new","Netflix & chill at home"], correct:2},
-  {q:"Coffee or Chai?", opts:["Coffee ☕","Chai 🍵","Neither, something else entirely","Both, depends on mood"], correct:1},
-  {q:"Favorite Season?", opts:["Winter ❄️","Summer ☀️","Monsoon 🌧️","Spring/Autumn 🍂"], correct:0},
-  {q:"Go-to Comfort Activity When Stressed?", opts:["Music","Sleeping","Talking to someone","Praying/quiet time"], correct:0},
-  {q:"Dogs or Cats?", opts:["Dogs 🐶","Cats 🐱","Both","Neither"], correct:0},
-  {q:"Pick a Vibe", opts:["Soft & dreamy 🌸","Bold & confident 💄","Chill & mysterious 🌙","Sweet & bubbly 🧸"], correct:2},
-  {q:"Favorite Type of Music", opts:["Bollywood/Desi","Pop/English","Sufi/Soulful","Whatever fits the mood"], correct:3},
-  {q:"If She Had a Superpower, It'd Be:", opts:["Reading minds","Time travel","Healing others","Flying"], correct:2},
+  {q:"My Favorite Snack?", opts:["Something sweet 🍫","Something spicy 🌶️","Something salty/crunchy 🍟","Fruits 🍓"], correct:1},
+  {q:"My Ideal Weekend?", opts:["Sleeping in all day","Hanging out with friends","Exploring somewhere new","Netflix & chill at home"], correct:2},
+  {q:"Coffee or Chai — which do I pick?", opts:["Coffee ☕","Chai 🍵","Neither, something else entirely","Both, depends on mood"], correct:1},
+  {q:"My Favorite Season?", opts:["Winter ❄️","Summer ☀️","Monsoon 🌧️","Spring/Autumn 🍂"], correct:0},
+  {q:"My Go-to Comfort Activity When Stressed?", opts:["Music","Sleeping","Talking to someone","Praying/quiet time"], correct:0},
+  {q:"Dogs or Cats — which do I love more?", opts:["Dogs 🐶","Cats 🐱","Both","Neither"], correct:0},
+  {q:"My Vibe, according to me?", opts:["Soft & dreamy 🌸","Bold & confident 💄","Chill & mysterious 🌙","Sweet & bubbly 🧸"], correct:2},
+  {q:"My Favorite Type of Music?", opts:["Bollywood/Desi","Pop/English","Sufi/Soulful","Whatever fits the mood"], correct:3},
+  {q:"If I Had a Superpower, It'd Be:", opts:["Reading minds","Time travel","Healing others","Flying"], correct:2},
 ];
 
 /* ---------------- landing ---------------- */
@@ -490,9 +490,9 @@ function submitQuiz(){
     return `<div class="answer-row"><span>${qi+1}. ${q.q}</span><span class="tag ${right?'right':'wrong'}">${right? '✔ nailed it' : '✕ close one'}</span></div>`;
   }).join('');
   let msg;
-  if(score>=8) msg="wow, you really know yourself! 🩷";
-  else if(score>=5) msg="pretty good — you get yourself pretty well! 🌸";
-  else msg="hehe, some surprises even for you! 💫";
+  if(score>=8) msg="wow, you really know Sruthi so well! 🩷";
+  else if(score>=5) msg="pretty good — you know her better than most! 🌸";
+  else msg="hehe, looks like there's more to learn about her! 💫";
   document.getElementById('quizResult').innerHTML = `
     <div class="result-card">
       <div class="result-score">${score} / 10</div>
